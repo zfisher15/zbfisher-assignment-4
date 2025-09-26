@@ -32,3 +32,14 @@ elif load_choice == "Heavy":
     current_gpa -= 1.0
 else:
     print("Your input was invalid.")
+#part 3
+class_choice = input("Which class would you like to add: Math, English, or History")
+class_list = ["Math", "English", "History"]
+
+if class_choice in class_list:
+    print(f"You chose {class_choice}. This class will require 2 hours of studying.)
+    study_hours += 2
+else:
+    print("Invalid option")
+if class_choice == "English" or class_choice == "History":
+    social_points += 5
