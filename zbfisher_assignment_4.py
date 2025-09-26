@@ -41,7 +41,16 @@ if class_choice in class_list:
     study_hours += 2
 elif class_choice not in class_list:
     print("Invalid option")
-if (class_choice == "English" and class_choice == "History") or (class_choice == "History" and not "Math"):
+if (class_choice == "English" and class_choice == "History") or (class_choice == "English" and not "Math"):
     social_points += 5
+#part 4
+if class_choice is not "English" or class_choice is not "History":
+    if class_choice == "English":
+        print("You picked the best class for points.")
+    print("You did not earn your points.")
+elif class_choice == "History":
+    print("You should pick English for next semester.")
+elif clas_choice == "Science":
+    print("This is not social.")
 
 
