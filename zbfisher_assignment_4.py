@@ -11,7 +11,7 @@ print("Study hours:", study_hours)
 print("Social points:", social_points)
 print("Stress level:", stress_level)
 print()
-#part 2
+
 light_load = 11
 standard_load = 15
 heavy_load = 19
@@ -19,7 +19,7 @@ print("Choose your course load:")
 print("Light load: 11 credits")
 print("Standard Load: 15 credits")
 print("Heavy Load: 19 credits")
-
+#part 2
 load_choice = input("Your load choice: ")
 
 if load_choice == "Light":
@@ -37,9 +37,11 @@ class_choice = input("Which class would you like to add: Math, English, or Histo
 class_list = ["Math", "English", "History"]
 
 if class_choice in class_list:
-    print(f"You chose {class_choice}. This class will require 2 hours of studying.)
+    print(f"You chose {class_choice}. This class will require 2 hours of studying.")
     study_hours += 2
-else:
+elif class_choice not in class_list:
     print("Invalid option")
-if class_choice == "English" or class_choice == "History":
+if (class_choice == "English" and class_choice == "History") or (class_choice == "History" and not "Math"):
     social_points += 5
+
+
